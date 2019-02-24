@@ -6,7 +6,7 @@
 #
 Name     : sphinxcontrib-spelling
 Version  : 4.2.0
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/74/22/3fc121b8a7acd4952e0a280ced4703ed0082ae61533204731ef4cdfa01cb/sphinxcontrib-spelling-4.2.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/74/22/3fc121b8a7acd4952e0a280ced4703ed0082ae61533204731ef4cdfa01cb/sphinxcontrib-spelling-4.2.0.tar.gz
 Source99 : https://files.pythonhosted.org/packages/74/22/3fc121b8a7acd4952e0a280ced4703ed0082ae61533204731ef4cdfa01cb/sphinxcontrib-spelling-4.2.0.tar.gz.asc
@@ -72,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551025061
+export SOURCE_DATE_EPOCH=1551038323
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
