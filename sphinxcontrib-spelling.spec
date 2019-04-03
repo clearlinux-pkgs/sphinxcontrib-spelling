@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x3B6D06A0C428437A (doug@doughellmann.com)
 #
 Name     : sphinxcontrib-spelling
-Version  : 4.2.0
-Release  : 2
-URL      : https://files.pythonhosted.org/packages/74/22/3fc121b8a7acd4952e0a280ced4703ed0082ae61533204731ef4cdfa01cb/sphinxcontrib-spelling-4.2.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/74/22/3fc121b8a7acd4952e0a280ced4703ed0082ae61533204731ef4cdfa01cb/sphinxcontrib-spelling-4.2.0.tar.gz
-Source99 : https://files.pythonhosted.org/packages/74/22/3fc121b8a7acd4952e0a280ced4703ed0082ae61533204731ef4cdfa01cb/sphinxcontrib-spelling-4.2.0.tar.gz.asc
+Version  : 4.2.1
+Release  : 3
+URL      : https://files.pythonhosted.org/packages/f8/72/dc6b84c1602bde635e1bc7056cdb4c82da1068ba3768f79a263fc798b411/sphinxcontrib-spelling-4.2.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/f8/72/dc6b84c1602bde635e1bc7056cdb4c82da1068ba3768f79a263fc798b411/sphinxcontrib-spelling-4.2.1.tar.gz
+Source99 : https://files.pythonhosted.org/packages/f8/72/dc6b84c1602bde635e1bc7056cdb4c82da1068ba3768f79a263fc798b411/sphinxcontrib-spelling-4.2.1.tar.gz.asc
 Summary  : Sphinx spelling extension
 Group    : Development/Tools
 License  : BSD-2-Clause
@@ -65,14 +65,14 @@ python3 components for the sphinxcontrib-spelling package.
 
 
 %prep
-%setup -q -n sphinxcontrib-spelling-4.2.0
+%setup -q -n sphinxcontrib-spelling-4.2.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551038323
+export SOURCE_DATE_EPOCH=1554252462
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
@@ -82,6 +82,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 PYTHONPATH=%{buildroot}/usr/lib/python3.7/site-packages python3 setup.py test || :
 %install
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/sphinxcontrib-spelling
 cp LICENSE %{buildroot}/usr/share/package-licenses/sphinxcontrib-spelling/LICENSE

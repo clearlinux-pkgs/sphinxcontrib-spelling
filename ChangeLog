@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+4.2.1
+-----
+
+* fix remaining logging issue
+* Remove usage of deprecated logging API
+
 4.2.0
 -----
 
