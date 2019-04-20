@@ -6,7 +6,7 @@
 #
 Name     : sphinxcontrib-spelling
 Version  : 4.2.1
-Release  : 3
+Release  : 4
 URL      : https://files.pythonhosted.org/packages/f8/72/dc6b84c1602bde635e1bc7056cdb4c82da1068ba3768f79a263fc798b411/sphinxcontrib-spelling-4.2.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f8/72/dc6b84c1602bde635e1bc7056cdb4c82da1068ba3768f79a263fc798b411/sphinxcontrib-spelling-4.2.1.tar.gz
 Source99 : https://files.pythonhosted.org/packages/f8/72/dc6b84c1602bde635e1bc7056cdb4c82da1068ba3768f79a263fc798b411/sphinxcontrib-spelling-4.2.1.tar.gz.asc
