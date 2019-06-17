@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+4.3.0
+-----
+
+* Logging: use \`warning()\` instead of its deprecated alias
+* sort contraction list
+* Contractions
+* require sphinx >= 2.0.0
+* declare support for python 3.6
+
 4.2.1
 -----
 
