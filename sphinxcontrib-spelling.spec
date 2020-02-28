@@ -6,7 +6,7 @@
 #
 Name     : sphinxcontrib-spelling
 Version  : 4.3.0
-Release  : 9
+Release  : 10
 URL      : https://files.pythonhosted.org/packages/85/49/2e4089102078c181280f1a465e8e6c6f51f7fb96d4095bd43bb4825a703f/sphinxcontrib-spelling-4.3.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/85/49/2e4089102078c181280f1a465e8e6c6f51f7fb96d4095bd43bb4825a703f/sphinxcontrib-spelling-4.3.0.tar.gz
 Source1  : https://files.pythonhosted.org/packages/85/49/2e4089102078c181280f1a465e8e6c6f51f7fb96d4095bd43bb4825a703f/sphinxcontrib-spelling-4.3.0.tar.gz.asc
@@ -34,11 +34,11 @@ BuildRequires : virtualenv
 
 %description
 =========================
-         sphinxcontrib-spelling
-        =========================
-        
-        This package contains sphinxcontrb.spelling, a spelling checker for
-        Sphinx-based documentation.  It uses PyEnchant_ to produce a report
+sphinxcontrib-spelling
+=========================
+This package contains sphinxcontrb.spelling, a spelling checker for
+Sphinx-based documentation.  It uses PyEnchant_ to produce a report
+showing misspelled words.  Note: PyEnchant is now unmaintained.
 
 %package license
 Summary: license components for the sphinxcontrib-spelling package.
@@ -61,6 +61,7 @@ python components for the sphinxcontrib-spelling package.
 Summary: python3 components for the sphinxcontrib-spelling package.
 Group: Default
 Requires: python3-core
+Provides: pypi(sphinxcontrib.spelling)
 
 %description python3
 python3 components for the sphinxcontrib-spelling package.
@@ -75,7 +76,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1576016165
+export SOURCE_DATE_EPOCH=1582918731
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
