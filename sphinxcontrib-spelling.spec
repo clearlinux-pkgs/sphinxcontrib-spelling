@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x3B6D06A0C428437A (doug@doughellmann.com)
 #
 Name     : sphinxcontrib-spelling
-Version  : 4.3.0
-Release  : 10
-URL      : https://files.pythonhosted.org/packages/85/49/2e4089102078c181280f1a465e8e6c6f51f7fb96d4095bd43bb4825a703f/sphinxcontrib-spelling-4.3.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/85/49/2e4089102078c181280f1a465e8e6c6f51f7fb96d4095bd43bb4825a703f/sphinxcontrib-spelling-4.3.0.tar.gz
-Source1  : https://files.pythonhosted.org/packages/85/49/2e4089102078c181280f1a465e8e6c6f51f7fb96d4095bd43bb4825a703f/sphinxcontrib-spelling-4.3.0.tar.gz.asc
+Version  : 5.0.0
+Release  : 11
+URL      : https://files.pythonhosted.org/packages/62/a8/f52b1d2bc2012ad1fe4b81be19d88f543bce258074902b7ac5b18a13dda5/sphinxcontrib-spelling-5.0.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/62/a8/f52b1d2bc2012ad1fe4b81be19d88f543bce258074902b7ac5b18a13dda5/sphinxcontrib-spelling-5.0.0.tar.gz
+Source1  : https://files.pythonhosted.org/packages/62/a8/f52b1d2bc2012ad1fe4b81be19d88f543bce258074902b7ac5b18a13dda5/sphinxcontrib-spelling-5.0.0.tar.gz.asc
 Summary  : Sphinx spelling extension
 Group    : Development/Tools
 License  : BSD-2-Clause
@@ -20,7 +20,6 @@ Requires: Sphinx
 Requires: flake8
 Requires: six
 BuildRequires : Sphinx
-BuildRequires : Sphinx-python
 BuildRequires : buildreq-distutils3
 BuildRequires : flake8
 BuildRequires : pbr
@@ -38,7 +37,7 @@ sphinxcontrib-spelling
 =========================
 This package contains sphinxcontrb.spelling, a spelling checker for
 Sphinx-based documentation.  It uses PyEnchant_ to produce a report
-showing misspelled words.  Note: PyEnchant is now unmaintained.
+showing misspelled words.
 
 %package license
 Summary: license components for the sphinxcontrib-spelling package.
@@ -61,22 +60,25 @@ python components for the sphinxcontrib-spelling package.
 Summary: python3 components for the sphinxcontrib-spelling package.
 Group: Default
 Requires: python3-core
-Provides: pypi(sphinxcontrib.spelling)
+Provides: pypi(sphinxcontrib_spelling)
+Requires: pypi(six)
+Requires: pypi(sphinx)
+Requires: pypi(pyenchant)
 
 %description python3
 python3 components for the sphinxcontrib-spelling package.
 
 
 %prep
-%setup -q -n sphinxcontrib-spelling-4.3.0
-cd %{_builddir}/sphinxcontrib-spelling-4.3.0
+%setup -q -n sphinxcontrib-spelling-5.0.0
+cd %{_builddir}/sphinxcontrib-spelling-5.0.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582918731
+export SOURCE_DATE_EPOCH=1587068710
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -98,7 +100,7 @@ PYTHONPATH=%{buildroot}$(python -c "import sys; print(sys.path[-1])") python set
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/sphinxcontrib-spelling
-cp %{_builddir}/sphinxcontrib-spelling-4.3.0/LICENSE %{buildroot}/usr/share/package-licenses/sphinxcontrib-spelling/22c50971a614a37b4b2ca0c412ea7f3235b7a975
+cp %{_builddir}/sphinxcontrib-spelling-5.0.0/LICENSE %{buildroot}/usr/share/package-licenses/sphinxcontrib-spelling/22c50971a614a37b4b2ca0c412ea7f3235b7a975
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
