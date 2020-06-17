@@ -1,5 +1,5 @@
 PKG_NAME := sphinxcontrib-spelling
-URL = https://files.pythonhosted.org/packages/63/16/d02d10f5bfa850c1a2792040ff6f46d4e4adba14ad7fcdeab2be9d0e903a/sphinxcontrib-spelling-5.1.0.tar.gz
+URL = https://files.pythonhosted.org/packages/c0/12/55b5b90da2377c8d999d7000018f05fc2883b75885de18506dd01019f720/sphinxcontrib-spelling-5.1.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
